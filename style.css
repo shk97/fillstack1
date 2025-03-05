@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.box {
+  border: 1px solid black;
+  background-color: lightgray;
+  padding: 20px;
+  width: 30%;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+
+/* Tablet View */
+@media (max-width: 991px) {
+  .box {
+      width: 48%;  /* Two sections in the first row */
+  }
+  .box:nth-child(3) { /* Last section full width */
+      width: 100%;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .box {
+      width: 100%; /* Each section full width */
+  }
+}
